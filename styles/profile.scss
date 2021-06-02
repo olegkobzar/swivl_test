@@ -1,0 +1,37 @@
+@import './variables.scss';
+
+.profile {
+  padding: 72px 0;
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__info {
+    width: 350px;
+  }
+
+  &__content {
+    width: calc(100% - 350px);
+    padding-left: 47px;
+  }
+}
+
+@media(max-width: $tablet) {
+  .profile {
+
+    &__wrap {
+      display: block;
+    }
+
+    &__info {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__content {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+}

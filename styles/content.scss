@@ -1,0 +1,57 @@
+@import './variables.scss';
+
+.content {
+
+  &__head {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-bottom: 62px;
+
+    &-label {
+      font-weight: 600;
+    }
+
+    &-switch {
+      padding: 0 30px;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px;
+  }
+
+  &__card {
+    width: 50%;
+    padding: 12px;
+  }
+}
+
+@media(max-width: $tablet) {
+  .content {
+
+    &__head {
+      margin-bottom: 30px;
+      padding-left: 0;
+    }
+
+    &__wrap {
+      // display: block;
+    }
+  }
+}
+
+@media(max-width: $mobile) {
+  .content {
+
+    &__wrap {
+      display: block;
+    }
+
+    &__card {
+      width: 100%;
+    }
+  }
+}

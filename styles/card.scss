@@ -1,0 +1,154 @@
+@import './variables.scss';
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+
+  &__head {
+    height: 24px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    &-label {
+      font-weight: 600;
+      white-space: nowrap;
+      margin-right: 4px;
+    }
+
+    &-tag {
+      background-color: $black-squeeze;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      padding: 0 4px;
+      font-weight: 600;
+    }
+
+    &-share {
+      display: flex;
+      align-items: center;
+
+      &:hover {
+
+        svg {
+          transform: scale(1.2);
+        }
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 4px;
+        transition: $transition;
+      }
+
+      span {
+        font-weight: 600;
+        color: $dark-gray;
+      }
+    }
+  }
+
+  &__name {
+    font-family: $secondary-font;
+    font-size: 36px;
+    line-height: 1.23;
+    display: block;
+    height: 132px;
+    overflow: hidden;
+    margin-bottom: 42px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+
+    &-img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: $bombay;
+    }
+
+    &-name {
+      padding-left: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      max-width: 125px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  &__share {
+
+    &-link {
+      font-size: 18px;
+      color: $mandy;
+
+      &:hover {
+        color: $dark-gray;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    &-col {
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media(max-width: 1075px) {
+  .card {
+
+    &__info {
+
+      &-col {
+        padding-left: 5px;
+
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: $mobile-sm) {
+  .card {
+
+    &__name {
+      font-size: 24px;
+      height: 86px;
+      margin-bottom: 30px;
+    }
+  }
+}
